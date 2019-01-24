@@ -1,7 +1,7 @@
 Developed by Dev IL.
 Twitter : https://twitter.com/DevIl00110000
 
-[![Build Status](https://travis-ci.org/DevIl00110000/easyCloud.svg?branch=master)](https://travis-ci.org/DevIl00110000/easyCloud) [![Total Downloads](https://poser.pugx.org/DevIl00110000/easyCloud/downloads.png)](https://packagist.org/packages/DevIl00110000/easyCloud)
+[![Total Downloads](https://poser.pugx.org/DevIl00110000/easyCloud/downloads.png)](https://packagist.org/packages/DevIl00110000/easyCloud)
 
 # EULA
 Is simple : 
