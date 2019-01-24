@@ -2,7 +2,7 @@ Developed by Dev IL. Version : 1.
 
 # EULA
 Is simple : 
-* Don't do something illégal.
+* Don't do something illÃ©gal.
 * I'm not responsible to what do you do. (i'm not your mother)
 
 # How to start
@@ -56,4 +56,4 @@ Explication :
 * **PHP**
 * **Json**
 
-My Twitter : [https://twitter.com/metalist_web]
+My Twitter : [https://twitter.com/DevIl00110000]
