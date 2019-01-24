@@ -1,5 +1,5 @@
 Developed by Dev IL.
-My twitter : https://twitter.com/DevIl00110000
+Twitter : https://twitter.com/DevIl00110000
 
 # EULA
 Is simple : 
