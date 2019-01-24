@@ -1,6 +1,8 @@
 Developed by Dev IL.
 Twitter : https://twitter.com/DevIl00110000
 
+[![Build Status](https://travis-ci.org/bshaffer/oauth2-server-php.svg?branch=master)](https://travis-ci.org/bshaffer/oauth2-server-php) [![Total Downloads](https://poser.pugx.org/bshaffer/oauth2-server-php/downloads.png)](https://packagist.org/packages/bshaffer/oauth2-server-php)
+
 # EULA
 Is simple : 
 * Don't do something illégal.
