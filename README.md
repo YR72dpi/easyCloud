@@ -13,11 +13,11 @@ Is simple :
 * Modify param.json, change the value of EULA to true IF YOU ACCEPT THE TERMS OF USE
 
 It's like that : 
-```
+``` json
 "EULA" : false,
 ```
 And need to be like that : 
-```
+``` json
 "EULA" : true,
 ```
 
