@@ -11,7 +11,6 @@ Is simple :
 * Extract all files
 * Modify param.json, change the value of EULA to true IF YOU ACCEPT THE TERMS OF USE
 
-Like that :
 It's like that : 
 ```
 "EULA" : false,
