@@ -22,7 +22,7 @@ And need to be like that :
 
 # How to use
 ### Setting
-All parameter is in "param.json" :
+All parameters are in "param.json" :
 ``` json
 {
 	"EULA" : true,
@@ -42,7 +42,7 @@ Explication :
 * ***max_file_size*** : Maximum size of the uploaded file
 * ***access_mdp*** : Password allowed to access files (encrypted in php sha1)
 * ***upload_mdp*** : Password allowed to upload files (encrypted in php sha1)
-* ***ext_XXXXX*** : extension of which you consider as a XXXXX
+* ***ext_XXXXX*** : extensions of which you consider like a XXXXX
 
 # Coded in...
 * **HTML**
