@@ -24,7 +24,7 @@ And need to be like that :
 # How to use
 ### Setting
 All parameter is in "param.json" :
-```
+``` json
 {
 	"EULA" : true,
 
