@@ -1,4 +1,4 @@
-Developed by Dev IL. Version : 1. 
+Developed by [https://twitter.com/DevIl00110000](Dev IL). Version : 1. 
 
 # EULA
 Is simple : 
@@ -56,4 +56,3 @@ Explication :
 * **PHP**
 * **Json**
 
-My Twitter : [https://twitter.com/DevIl00110000]
