@@ -1,4 +1,5 @@
-Developed by [https://twitter.com/DevIl00110000](Dev IL). Version : 1. 
+Developed by Dev IL.
+My twitter : https://twitter.com/DevIl00110000
 
 # EULA
 Is simple : 
