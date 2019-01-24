@@ -1,5 +1,13 @@
 Developed by Dev IL. [My Twitter](https://twitter.com/DevIl00110000)
 
+[![Latest Version](http://img.shields.io/packagist/v/DevIl00110000/easyCloud.svg?style=flat-square)](https://github.com/thephpDevIl00110000/easyCloud/releases)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![Build Status](https://img.shields.io/travis/thephpDevIl00110000/easyCloud/master.svg?style=flat-square)](https://travis-ci.org/thephpDevIl00110000/easyCloud)
+[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/thephpDevIl00110000/easyCloud.svg?style=flat-square)](https://scrutinizer-ci.com/g/thephpDevIl00110000/easyCloud/code-structure)
+[![Quality Score](https://img.shields.io/scrutinizer/g/thephpDevIl00110000/easyCloud.svg?style=flat-square)](https://scrutinizer-ci.com/g/thephpDevIl00110000/easyCloud)
+[![Total Downloads](https://img.shields.io/packagist/dt/DevIl00110000/easyCloud.svg?style=flat-square)](https://packagist.org/packages/DevIl00110000/easyCloud)
+[![PHPStan](https://img.shields.io/badge/PHPStan-enabled-brightgreen.svg?style=flat-square)](https://github.com/DevIl00110000/DevIl00110000)
+
 # EULA
 Is simple : 
 * Don't do something illégal.
