@@ -1,5 +1,4 @@
-Developed by Dev IL.
-Twitter : https://twitter.com/DevIl00110000
+Developed by Dev IL. [My Twitter](https://twitter.com/DevIl00110000)
 
 # EULA
 Is simple : 
@@ -43,11 +42,10 @@ Explication :
 * ***max_file_size*** : Maximum size of the uploaded file
 * ***access_mdp*** : Password allowed to access files (encrypted in php sha1)
 * ***upload_mdp*** : Password allowed to upload files (encrypted in php sha1)
-* ***ext_XXXXX*** : extension of which you consider like a XXXXX
+* ***ext_XXXXX*** : extension of which you consider as a XXXXX
 
 # Coded in...
 * **HTML**
 * **CSS**
 * **PHP**
 * **Json**
-
