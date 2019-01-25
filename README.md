@@ -1,5 +1,6 @@
 Developed by Dev IL. 
 
+
 If you have a question or just want talk with me, you can come on [my Twitter](https://twitter.com/DevIl00110000).
 
 
@@ -8,8 +9,9 @@ Is simple :
 * Don't do something illégal.
 * I'm not responsible to what do you do. (i'm not your mother)
 
-# How to start
+# How to use
 
+# Start
 * Download the zip
 * Extract all files
 * Modify param.json, change the value of EULA to true IF YOU ACCEPT THE TERMS OF USE
@@ -23,7 +25,12 @@ And need to be like that :
 "EULA" : true,
 ```
 
-# How to use
+
+### Default password
+The default password for access to cloud is **cloud**
+
+The default password for upload to cloud is **upload**
+
 ### Setting
 All parameters are in "param.json" :
 ``` json
@@ -57,10 +64,6 @@ not like that :
 ``` json
 "access_mdp" : [""],
 ```
-
-### Default
-The default password for access to cloud is **cloud**
-The default password for upload to cloud is **upload**
 
 # Coded in...
 * **HTML**
