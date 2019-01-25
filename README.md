@@ -11,7 +11,7 @@ Is simple :
 
 # How to use
 
-# Start
+### Start
 * Download the zip
 * Extract all files
 * Modify param.json, change the value of EULA to true IF YOU ACCEPT THE TERMS OF USE
