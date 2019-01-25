@@ -1,6 +1,5 @@
 Developed by Dev IL. 
 
-
 If you have a question or just want talk with me, you can come on [my Twitter](https://twitter.com/DevIl00110000).
 
 
