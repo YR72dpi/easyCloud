@@ -14,7 +14,7 @@ Is simple :
 ### Start
 * Download the zip
 * Extract all files
-* Modify param.json, change the value of EULA to true IF YOU ACCEPT THE TERMS OF USE
+* Modify _param.json_, change the value of EULA to true IF YOU ACCEPT THE TERMS OF USE
 
 It's like that : 
 ``` json
@@ -24,6 +24,7 @@ And need to be like that :
 ``` json
 "EULA" : true,
 ```
+
 
 ### Default password
 The default password for access to cloud is **cloud**
@@ -36,10 +37,16 @@ All parameters are in "param.json" :
 {
 	"EULA" : true,
 
-	"max_file_size" : 104857600,
+	"max_file_size" : 104857600, /** Value in byte 
+	* 1 Byte = 1 octet = 8 bits
+	*
+	* 1 Go = 1073741824 o
+	* 1 Mo = 1048576 o
+	* 1 Ko = 1024 o
+	*/
 
-	"access_mdp" : ["000e793db70c59309fa6f0f36d0046d110f3be3c"],
-	"upload_mdp" : ["bb73aaafa1596e5425dc514a361ad4ef658f2758"],
+	"access_mdp" : ["000e793db70c59309fa6f0f36d0046d110f3be3c"], /* in sha1 , not just "" or a space */
+	"upload_mdp" : ["bb73aaafa1596e5425dc514a361ad4ef658f2758"], /* in sha1 , not just "" or a space */
 
 	"ext_image" : ["png", "jpg", "jpeg", "gif"],
 	"ext_audio" : ["wma", "wav", "ogg", "mp3"],
@@ -53,7 +60,7 @@ Explication :
 * ***upload_mdp*** : Password allowed to upload files (encrypted in php sha1)
 * ***ext_XXXXX*** : extensions of which you consider like a XXXXX
 
-### /!\ WARNING /!\ Passwordless
+## /!\ WARNING /!\ Passwordless
 If you don't want password, _access_mdp_ and/or _upload_mdp_ need to be
 like that :
 ``` json
