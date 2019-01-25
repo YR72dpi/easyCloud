@@ -11,7 +11,7 @@ Is simple :
 
 # How to use
 
-### Start
+## Start
 * Download the zip
 * Extract all files
 * Modify param.json, change the value of EULA to true IF YOU ACCEPT THE TERMS OF USE
@@ -25,13 +25,12 @@ And need to be like that :
 "EULA" : true,
 ```
 
-
-### Default password
+# Default password
 The default password for access to cloud is **cloud**
 
 The default password for upload to cloud is **upload**
 
-### Setting
+## Setting
 All parameters are in "param.json" :
 ``` json
 {
@@ -54,7 +53,7 @@ Explication :
 * ***upload_mdp*** : Password allowed to upload files (encrypted in php sha1)
 * ***ext_XXXXX*** : extensions of which you consider like a XXXXX
 
-## /!\ WARNING /!\
+# /!\ WARNING /!\ Passwordless
 If you don't want password, _access_mdp_ and/or _upload_mdp_ need to be
 like that :
 ``` json
