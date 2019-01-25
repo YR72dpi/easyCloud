@@ -37,16 +37,10 @@ All parameters are in "param.json" :
 {
 	"EULA" : true,
 
-	"max_file_size" : 104857600, /** Value in byte 
-	* 1 Byte = 1 octet = 8 bits
-	*
-	* 1 Go = 1073741824 o
-	* 1 Mo = 1048576 o
-	* 1 Ko = 1024 o
-	*/
+	"max_file_size" : 104857600,
 
-	"access_mdp" : ["000e793db70c59309fa6f0f36d0046d110f3be3c"], /* in sha1 , not just "" or a space */
-	"upload_mdp" : ["bb73aaafa1596e5425dc514a361ad4ef658f2758"], /* in sha1 , not just "" or a space */
+	"access_mdp" : ["000e793db70c59309fa6f0f36d0046d110f3be3c"], 
+	"upload_mdp" : ["bb73aaafa1596e5425dc514a361ad4ef658f2758"],
 
 	"ext_image" : ["png", "jpg", "jpeg", "gif"],
 	"ext_audio" : ["wma", "wav", "ogg", "mp3"],
@@ -55,7 +49,7 @@ All parameters are in "param.json" :
 }
 ```
 Explication :
-* ***max_file_size*** : Maximum size of the uploaded file
+* ***max_file_size*** : Maximum size of the uploaded file (in bytes)
 * ***access_mdp*** : Password allowed to access files (encrypted in php sha1)
 * ***upload_mdp*** : Password allowed to upload files (encrypted in php sha1)
 * ***ext_XXXXX*** : extensions of which you consider like a XXXXX
