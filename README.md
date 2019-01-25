@@ -1,4 +1,6 @@
-Developed by Dev IL. [My Twitter](https://twitter.com/DevIl00110000)
+Developed by Dev IL. 
+If you have a question or just want talk with me, you can come on [my Twitter](https://twitter.com/DevIl00110000).
+
 
 # EULA
 Is simple : 
@@ -29,7 +31,7 @@ All parameters are in "param.json" :
 
 	"max_file_size" : 104857600,
 
-	"access_mdp" : ["000e793db70c59309fa6f0f36d0046d110f3be3c"],
+	"access_mdp" : ["000e793db70c59309fa6f0f36d0046d110f3be3c"], 
 	"upload_mdp" : ["bb73aaafa1596e5425dc514a361ad4ef658f2758"],
 
 	"ext_image" : ["png", "jpg", "jpeg", "gif"],
