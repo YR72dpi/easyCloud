@@ -1,6 +1,14 @@
 <?php session_start();
-define('PARAM', json_decode(preg_replace("!/\*[^*]*\*+([^/][^*]*\*+)*/!", '', file_get_contents('param.json')), 1));
+
+// Constants
+require_once "param.php";
 define('DIR_FILE', "file/");
+
+// Set up
+
+if (!is_dir(DIR_FILE)) {
+  mkdir(DIR_FILE);
+}
 
 function aff() {
 	if (PARAM['EULA']) {
