@@ -44,12 +44,15 @@
 	</nav>
 	<div id="content">
 	<?php if (aff()) { ?>
-		<form method="POST" action="" enctype="multipart/form-data">
+		<?php
+		if (!empty(PARAM["upload_mdp"])) {
+			echo '
+			<form method="POST" action="" enctype="multipart/form-data">
 			<!-- Upload password : --> <input type="password" name="mdp" placeholder="Upload Password" /><br>
 			<!-- Avatar  : --><input type="file" name="fichier" /><br>
 			<input type="submit" value="Send file">
-		</form>
-		<?php
+			</form>
+			';
 			if (isset($_POST['mdp'])) {
 				if (in_array(sha1($_POST['mdp']), PARAM["upload_mdp"])) {
 					if (isset($_FILES['fichier']) AND !empty($_FILES['fichier']['name'])) {
@@ -65,10 +68,27 @@
 					} else { echo "Select a file !"; }
 				} else { echo "Password Error"; }
 			}
-
-
-
-
+		} else {
+			echo '
+			<form method="POST" action="" enctype="multipart/form-data">
+			<!-- Avatar  : --><input type="file" name="fichier" /><br>
+			<input type="submit" value="Send file">
+			</form>
+			';
+			if (isset($_FILES['fichier'])){
+				if (!empty($_FILES['fichier']['name'])) {
+					$TailleMax = PARAM['max_file_size'];
+					if ($_FILES['fichier']['size'] <= $TailleMax) {
+						$Chemin = DIR_FILE.date('d-M-Y')."__".$_FILES['fichier']['name'];
+						$resultat = move_uploaded_file($_FILES['fichier']['tmp_name'], $Chemin);
+						if ($resultat) {
+							$retour = 'index.php';
+							header('Location:'.$retour);
+						} else { echo "Error"; }
+					} else { echo "Your file size exceeds the authorized one.";}
+				} else { echo "Select a file !"; }
+			} 
+		}
 	?>
 	<?php } ?>
 	</div>
