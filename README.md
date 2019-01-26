@@ -1,12 +1,13 @@
 Developed by Dev IL. 
 
+It's a cloud without database, so there are some limits...
 
 If you have a question or just want talk with me, you can come on [my Twitter](https://twitter.com/DevIl00110000).
 
 
 # EULA
 Is simple : 
-* Don't do something illÃ©gal.
+* Don't do something illégal.
 * I'm not responsible to what do you do. (i'm not your mother)
 
 # How to use
@@ -79,4 +80,4 @@ not like that :
 * **CSS**
 * **PHP**
 
-Size : **10.4 Mo** *with example files*.
+Size : **10.4 Mo**
