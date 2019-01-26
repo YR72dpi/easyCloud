@@ -14,15 +14,15 @@ Is simple :
 ### Start
 * Download the zip
 * Extract all files
-* Modify _param.json_, change the value of EULA to true IF YOU ACCEPT THE TERMS OF USE
+* Modify _param.php_, change the value of EULA to true IF YOU ACCEPT THE TERMS OF USE
 
 It's like that : 
-``` json
-"EULA" : false,
+``` php
+"EULA" => false,
 ```
 And need to be like that : 
-``` json
-"EULA" : true,
+``` php
+"EULA" => true,
 ```
 
 
@@ -32,24 +32,33 @@ The default password for access to cloud is **cloud**
 The default password for upload to cloud is **upload**
 
 ### Setting
-All parameters are in "param.json" :
-``` json
-{
-	"EULA" : true,
+All parameters are in "param.php" :
+``` php
+<?php
+define('PARAM', [
+	
+	"EULA" => true,
+	"max_file_size" => 104857600, /** Value in byte 
+	* 1 Byte = 1 octet = 8 bits
+	*
+	* 1 Go = 1073741824 o
+	* 1 Mo = 1048576 o
+	* 1 Ko = 1024 o
+	*/
 
-	"max_file_size" : 104857600,
+	"access_mdp" =>  ["000e793db70c59309fa6f0f36d0046d110f3be3c"], /* in sha1 , not just "" or a space */
+	"upload_mdp" => ["bb73aaafa1596e5425dc514a361ad4ef658f2758"], /* in sha1 , not just "" or a space */
 
-	"access_mdp" : ["000e793db70c59309fa6f0f36d0046d110f3be3c"], 
-	"upload_mdp" : ["bb73aaafa1596e5425dc514a361ad4ef658f2758"],
+	"ext_image" => ["png", "jpg", "jpeg", "gif"],
+	"ext_audio" => ["wma", "wav", "ogg", "mp3"],
+	"ext_video" => ["avi", "wmv", "mov", "webm", "mp4"],
+	"ext_docum" => ["text", "txt", "pdf", "doc", "docx"],
 
-	"ext_image" : ["png", "jpg", "jpeg", "gif"],
-	"ext_audio" : ["wma", "wav", "ogg", "mp3"],
-	"ext_video" : ["avi", "wmv", "mov", "webm", "mp4"],
-	"ext_docum" : ["text", "txt", "pdf", "doc", "docx"]
-}
+]);
+?>
 ```
 Explication :
-* ***max_file_size*** : Maximum size of the uploaded file (in bytes)
+* ***max_file_size*** : Maximum size of the uploaded file
 * ***access_mdp*** : Password allowed to access files (encrypted in php sha1)
 * ***upload_mdp*** : Password allowed to upload files (encrypted in php sha1)
 * ***ext_XXXXX*** : extensions of which you consider like a XXXXX
@@ -57,18 +66,17 @@ Explication :
 ## /!\ WARNING /!\ Passwordless
 If you don't want password, _access_mdp_ and/or _upload_mdp_ need to be
 like that :
-``` json
-"access_mdp" : [],
+``` php
+"access_mdp" => []
 ```
 not like that : 
-``` json
-"access_mdp" : [""],
+``` php
+"access_mdp" =>  [""]
 ```
 
 # Coded in...
 * **HTML**
 * **CSS**
 * **PHP**
-* **Json**
 
 Size : **10.4 Mo** *with example files*.
