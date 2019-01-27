@@ -5,7 +5,7 @@
 	<title>easyCloud</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="icon" type="images/x-icon" href="style/favicon.ico">
+	<link rel="icon" type="images/x-icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 </head>
 <body>
