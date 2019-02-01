@@ -7,7 +7,7 @@ If you have a question or just want talk with me, you can come on [my Twitter](h
 
 # EULA
 Is simple : 
-* Don't do something illégal.
+* Don't do something illegal.
 * I'm not responsible to what do you do. (i'm not your mother)
 
 # How to use
@@ -80,4 +80,4 @@ not like that :
 * **CSS**
 * **PHP**
 
-Size : **15,4 Ko**
+Size : **15,4 Ko**
