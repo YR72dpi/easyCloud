@@ -51,21 +51,15 @@
 			<!-- Upload password : --> <input type="password" name="mdp" placeholder="Upload Password" /><br>
 			<!-- Avatar  : --><input type="file" name="fichier" /><br>
 			<input type="submit" value="Send file">
-			</form>
+			<br>
 			';
 			if (isset($_POST['mdp'])) {
 				if (in_array(sha1($_POST['mdp']), PARAM["upload_mdp"])) {
-					if (isset($_FILES['fichier']) AND !empty($_FILES['fichier']['name'])) {
-						$TailleMax = PARAM['max_file_size'];
-						if ($_FILES['fichier']['size'] <= $TailleMax) {
-								$Chemin = DIR_FILE.date('d-M-Y')."__".$_FILES['fichier']['name'];
-								$resultat = move_uploaded_file($_FILES['fichier']['tmp_name'], $Chemin);
-								if ($resultat) {
-									$retour = 'index.php';
-									header('Location:'.$retour);
-								} else { echo "Error"; }
-						} else { echo "Your file size exceeds the authorized one.";}
-					} else { echo "Select a file !"; }
+					if (isset($_FILES['fichier'])) {
+						if(!empty($_FILES['fichier']['name'])) {
+							$can_upload = true;
+						} else { echo "Select a file !"; }
+					}
 				} else { echo "Password Error"; }
 			}
 		} else {
@@ -73,27 +67,33 @@
 			<form method="POST" action="" enctype="multipart/form-data">
 			<!-- Avatar  : --><input type="file" name="fichier" /><br>
 			<input type="submit" value="Send file">
-			</form>
+			<br>
 			';
 			if (isset($_FILES['fichier'])){
 				if (!empty($_FILES['fichier']['name'])) {
-					$TailleMax = PARAM['max_file_size'];
-					if ($_FILES['fichier']['size'] <= $TailleMax) {
-						$Chemin = DIR_FILE.date('d-M-Y')."__".$_FILES['fichier']['name'];
-						$resultat = move_uploaded_file($_FILES['fichier']['tmp_name'], $Chemin);
-						if ($resultat) {
-							$retour = 'index.php';
-							header('Location:'.$retour);
-						} else { echo "Error"; }
-					} else { echo "Your file size exceeds the authorized one.";}
+					$can_upload = true;
 				} else { echo "Select a file !"; }
 			} 
 		}
+
+		if (isset($can_upload) && $can_upload) {
+			$TailleMax = PARAM['max_file_size'];
+			if ($_FILES['fichier']['size'] <= $TailleMax) {
+				$ExtensionUpload = strtolower(substr(strrchr($_FILES['fichier']['name'], '.'), 1));
+				$Chemin = DIR_FILE.date('dMY')."__".uniqid().".".$ExtensionUpload; /* $_FILES['fichier']['name'] */
+				$resultat = move_uploaded_file($_FILES['fichier']['tmp_name'], $Chemin);
+				if ($resultat) {
+					$retour = 'index.php';
+					header('Location:'.$retour);
+				} else { echo "Error"; }
+			} else { echo "Your file size exceeds the authorized one.";}
+		}
 	?>
 	<?php } ?>
+	</form>
 	</div>
 	<footer>
-		<p>(c) EasyCloud - Powered by <strong>Dev IL</strong>. Cloud Open Source. SIMPLE cloud ! FREE cloud.</p>
+		<p>(c) EasyCloud - Powered by <strong>Dev IL</strong>. Cloud Open Source.</p>
 	</footer>
 </body>
 </html>
