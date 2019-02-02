@@ -38,7 +38,7 @@ All parameters are in "param.php" :
 <?php
 define('PARAM', [
 	
-	"EULA" => true,
+	"EULA" => false,
 	"redirect_aft_upload" => false,
 	"max_file_size" => 104857600, /** Value in byte 
 	* 1 Byte = 1 octet = 8 bits

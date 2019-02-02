@@ -1,7 +1,7 @@
 <?php
 define('PARAM', [
 	
-	"EULA" => true,
+	"EULA" => false,
 	"redirect_aft_upload" => true,
 	"max_file_size" => 104857600, /** Value in byte 
 	* 1 Byte = 1 octet = 8 bits
