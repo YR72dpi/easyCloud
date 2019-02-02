@@ -53,6 +53,7 @@ nav button:hover {
 	height: 29rem;
 	min-height:400px;
 	overflow-y: auto;
+	overflow-x: none;
 }
 
 footer {
@@ -75,7 +76,7 @@ a {
 form {
 	background-color: white;
 	border-radius: 10px;	
-	width: 25%;
+	width: 30%;
 	padding: 10px;
 	display:block;
 	margin: 5rem auto 0 auto;
@@ -88,6 +89,9 @@ form input {
 }
 form input[type=password] {
 	border-bottom: 1px solid black;
+}
+form input[type=file] {
+	padding: 0px;
 }
 @media screen and (max-width: 720px) {
 	body {

@@ -10,6 +10,8 @@ if (!is_dir(DIR_FILE)) {
   mkdir(DIR_FILE);
 }
 
+// Function
+
 function aff() {
 	if (PARAM['EULA']) {
 		if (empty(PARAM["access_mdp"])) {

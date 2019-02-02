@@ -72,7 +72,7 @@
 		?>
 	</div>
 	<footer>
-		<p>(c) EasyCloud - Powered by <strong>Dev IL</strong>. Cloud Open Source. SIMPLE cloud ! FREE cloud.</p>
+		<p>(c) EasyCloud - Powered by <strong>Dev IL</strong>. Cloud Open Source.</p>
 	</footer>
 </body>
 </html>

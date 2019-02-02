@@ -39,6 +39,7 @@ All parameters are in "param.php" :
 define('PARAM', [
 	
 	"EULA" => true,
+	"redirect_aft_upload" => false,
 	"max_file_size" => 104857600, /** Value in byte 
 	* 1 Byte = 1 octet = 8 bits
 	*
@@ -47,8 +48,8 @@ define('PARAM', [
 	* 1 Ko = 1024 o
 	*/
 
-	"access_mdp" =>  ["000e793db70c59309fa6f0f36d0046d110f3be3c"], /* in sha1 , not just "" or a space */
-	"upload_mdp" => ["bb73aaafa1596e5425dc514a361ad4ef658f2758"], /* in sha1 , not just "" or a space */
+	"access_mdp" => [], // in sha1 , not just "" or a space  "000e793db70c59309fa6f0f36d0046d110f3be3c"
+	"upload_mdp" => [], // in sha1 , not just "" or a space  "bb73aaafa1596e5425dc514a361ad4ef658f2758"
 
 	"ext_image" => ["png", "jpg", "jpeg", "gif"],
 	"ext_audio" => ["wma", "wav", "ogg", "mp3"],
@@ -59,6 +60,7 @@ define('PARAM', [
 ?>
 ```
 Explication :
+* ***redirect_aft_upload*** : "true" if you want to be redirected after upload (and if it's a success)
 * ***max_file_size*** : Maximum size of the uploaded file
 * ***access_mdp*** : Password allowed to access files (encrypted in php sha1)
 * ***upload_mdp*** : Password allowed to upload files (encrypted in php sha1)

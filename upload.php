@@ -1,5 +1,4 @@
 <?php require_once 'fonction.php'; ?>
-<!DOCTYPE html>
 <html lang='en'>
 <head>
 	<title>easyCloud</title>
@@ -43,53 +42,61 @@
 		<a class="a_button" href="<?= $upload ?>"><button class="button_file"><strong>Upload</strong></button></a>
 	</nav>
 	<div id="content">
-	<?php if (aff()) { ?>
-		<?php
-		if (!empty(PARAM["upload_mdp"])) {
-			echo '
-			<form method="POST" action="" enctype="multipart/form-data">
-			<!-- Upload password : --> <input type="password" name="mdp" placeholder="Upload Password" /><br>
-			<!-- Avatar  : --><input type="file" name="fichier" /><br>
-			<input type="submit" value="Send file">
-			<br>
-			';
-			if (isset($_POST['mdp'])) {
-				if (in_array(sha1($_POST['mdp']), PARAM["upload_mdp"])) {
-					if (isset($_FILES['fichier'])) {
-						if(!empty($_FILES['fichier']['name'])) {
-							$can_upload = true;
-						} else { echo "Select a file !"; }
+		<form method="POST" action="" enctype="multipart/form-data">
+			<?php if (aff()) { ?>
+			<?php
+				if (!empty(PARAM["upload_mdp"])) {
+					echo '
+					<input type="password" name="mdp" placeholder="Upload Password" /><br>
+					';
+					if (isset($_POST['mdp'])) {
+						if (in_array(sha1($_POST['mdp']), PARAM["upload_mdp"])) {
+							if (isset($_FILES['fichier'])) {
+								if(!empty($_FILES['fichier']['name'][0])) {
+									$can_upload = true;
+								} else { echo "Select a file ! <br><br>"; }
+							}
+						} else { echo "Password Error"; }
 					}
-				} else { echo "Password Error"; }
-			}
-		} else {
-			echo '
-			<form method="POST" action="" enctype="multipart/form-data">
-			<!-- Avatar  : --><input type="file" name="fichier" /><br>
-			<input type="submit" value="Send file">
-			<br>
-			';
-			if (isset($_FILES['fichier'])){
-				if (!empty($_FILES['fichier']['name'])) {
-					$can_upload = true;
-				} else { echo "Select a file !"; }
-			} 
-		}
+				} else {
+					if (isset($_FILES['fichier'])){
+						if (!empty($_FILES['fichier']['name'][0])) {
+							$can_upload = true;
+						} else { echo "Select a file ! <br><br>"; }
+					} 
+				}
+			?>
+			<?php } ?>
 
-		if (isset($can_upload) && $can_upload) {
-			$TailleMax = PARAM['max_file_size'];
-			if ($_FILES['fichier']['size'] <= $TailleMax) {
-				$ExtensionUpload = strtolower(substr(strrchr($_FILES['fichier']['name'], '.'), 1));
-				$Chemin = DIR_FILE.date('dMY')."__".uniqid().".".$ExtensionUpload; /* $_FILES['fichier']['name'] */
-				$resultat = move_uploaded_file($_FILES['fichier']['tmp_name'], $Chemin);
-				if ($resultat) {
-					$retour = 'index.php';
-					header('Location:'.$retour);
-				} else { echo "Error"; }
-			} else { echo "Your file size exceeds the authorized one.";}
-		}
-	?>
-	<?php } ?>
+		<input name="fichier[]" id="fichier" type="file" multiple="" /><br>
+		<input type="submit" value="Send file">
+
+			<?php 
+				if (isset($can_upload) && $can_upload) {
+					//var_dump($_FILES);
+						$total = count($_FILES['fichier']['name']);
+						for( $i=0 ; $i < $total ; $i++ ) {
+							$TailleMax = PARAM['max_file_size'];
+							$file_name = $_FILES['fichier']['name'][$i];
+							if ($_FILES['fichier']['size'][$i] <= $TailleMax) {
+								$ExtensionUpload = strtolower(substr(strrchr($file_name, '.'), 1));
+								$Chemin = DIR_FILE.date('dMY')."__".uniqid().".".$ExtensionUpload; /* $_FILES['fichier']['name'] */
+								$resultat = move_uploaded_file($_FILES['fichier']['tmp_name'][$i], $Chemin);
+								if ($resultat) {
+									if (PARAM['redirect_aft_upload']) {
+										$retour = 'index.php';
+										header('Location:'.$retour);
+									} else {
+										echo "<br><span style='color: green;''>".$file_name." uploaded ! </span>";
+									}
+								} else {
+									echo "<br><span style='color: red;''>".$file_name." not uploaded ! </span>";
+								}
+							} else { echo $file_name." it's too heavy !";}
+						}
+					
+				}
+			?>
 	</form>
 	</div>
 	<footer>
