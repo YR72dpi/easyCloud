@@ -81,6 +81,7 @@ form {
 	display:block;
 	margin: 5rem auto 0 auto;
 	word-wrap: break-word;
+	overflow-x: auto;
 }
 form input {
 	display:block;
