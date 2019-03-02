@@ -37,7 +37,7 @@
 							$file_name = $_FILES['fichier']['name'][$i];
 							if ($_FILES['fichier']['size'][$i] <= $TailleMax) {
 								$ExtensionUpload = strtolower(substr(strrchr($file_name, '.'), 1));
-								$Chemin = DIR_FILE.date('dMY')."__".uniqid().".".$ExtensionUpload; /* $_FILES['fichier']['name'] */
+								$Chemin = DIR_FILE.time()."_".$_FILES['fichier']['name'][$i]; /* $_FILES['fichier']['name'] */
 								//var_dump($_FILES['fichier']);
 								$resultat = move_uploaded_file($_FILES['fichier']['tmp_name'][$i], $Chemin);
 								if ($resultat) {
