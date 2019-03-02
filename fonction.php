@@ -2,7 +2,7 @@
 
 // Constants
 require_once "param.php";
-define('DIR_FILE', "file/");
+define('DIR_FILE', "./file/");
 
 // Set up
 

@@ -94,6 +94,19 @@ form input[type=password] {
 form input[type=file] {
 	padding: 0px;
 }
+
+#access_cloud {
+	display: none;
+	border: none;
+	background-color: white;
+	border-radius: 10px;	
+	width: 30%;
+	padding: 10px;
+	margin: 5rem 0% 0 50%;
+	transform: translateX(-50%);
+	word-wrap: break-word;
+}
+
 @media screen and (max-width: 720px) {
 	body {
 		padding: 60px 10px 10px 110px;
